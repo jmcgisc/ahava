@@ -6,6 +6,7 @@ import About from "./components/About";
 import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import FloatingWhatsApp from './components/FloatingWhatsApp'; // Ajusta la ruta si es necesario
 import Cta from "./components/Cta";
 
 import {
@@ -49,6 +50,8 @@ const appConfig = {
   }
 };
 
+  const miNumeroDeTelefono = '525656742536'; 
+  const mensajePredeterminado = '¡Hola! Estoy interesado en tus servicios.';
 export default function App() {
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen">
@@ -75,6 +78,11 @@ export default function App() {
         <Clients />
         
         <Contact />
+        
+      <FloatingWhatsApp
+        phoneNumber={miNumeroDeTelefono}
+        message={mensajePredeterminado}
+      />
       </main>
       
       {/* Footer */}

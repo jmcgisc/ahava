@@ -29,7 +29,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-white">Correo Electrónico</p>
-                  <p className="text-white/70">info@ahava.com</p>
+                  <p className="text-white/70">rh@ahavacorporativo.com.mx</p>
                 </div>
               </div>
               
@@ -39,7 +39,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-white">Teléfono</p>
-                  <p className="text-white/70">+52 (55) 1234 5678</p>
+                  <p className="text-white/70">+52 (55) 56 74 25 36</p>
                 </div>
               </div>
               
