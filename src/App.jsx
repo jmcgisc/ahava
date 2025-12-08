@@ -11,7 +11,7 @@ import Cta from "./components/Cta";
 
 import {
   ChartBarIcon,
-  BriefcaseIcon, 
+  BriefcaseIcon,
   CheckBadgeIcon,
 } from "@heroicons/react/24/outline";
 
@@ -19,8 +19,7 @@ import {
 const appConfig = {
   presentation: {
     title: "Amamos lo que hacemos",
-    highlightedTitle: "hacemos", 
-    subtitle: "Somos el resultado de +18 años de experiencia de un equipo especialista en estrategia, desarrollo y posicionamiento de negocios.",
+    highlightedTitle: "hacemos",
     items: [
       {
         title: "Comprensión Estratégica",
@@ -33,7 +32,7 @@ const appConfig = {
         icon: BriefcaseIcon,
       },
       {
-        title: "Resultados Comprobados", 
+        title: "Resultados Comprobados",
         text: "Buscamos el equilibrio entre lo funcional y lo estético, logrando durante todo este tiempo el éxito de cada uno de nuestros clientes.",
         icon: CheckBadgeIcon,
       },
@@ -43,48 +42,48 @@ const appConfig = {
     name: "AHAVA",
     stats: {
       clients: "+200",
-      projects: "+500", 
+      projects: "+500",
       successRate: "98%",
       experience: "18+"
     }
   }
 };
 
-  const miNumeroDeTelefono = '525656742536'; 
-  const mensajePredeterminado = '¡Hola! Estoy interesado en tus servicios.';
+const miNumeroDeTelefono = '525656742536';
+const mensajePredeterminado = '¡Hola! Estoy interesado en tus servicios.';
 export default function App() {
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen">
       {/* Header */}
       <Header />
-      
+
       {/* Main Content */}
       <main>
         <Hero />
-        
-        <Presentation 
+
+        <Presentation
           title={appConfig.presentation.title}
           highlightedTitle={appConfig.presentation.highlightedTitle}
           subtitle={appConfig.presentation.subtitle}
           items={appConfig.presentation.items}
         />
-        
+
         <Services />
-        
+
         <About />
-        
+
         <Cta />
-        
+
         <Clients />
-        
+
         <Contact />
-        
-      <FloatingWhatsApp
-        phoneNumber={miNumeroDeTelefono}
-        message={mensajePredeterminado}
-      />
+
+        <FloatingWhatsApp
+          phoneNumber={miNumeroDeTelefono}
+          message={mensajePredeterminado}
+        />
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>

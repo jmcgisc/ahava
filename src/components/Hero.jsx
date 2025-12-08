@@ -41,23 +41,23 @@ const Hero = () => {
           >
             {/* Opción 1: Video local */}
             <source src="/videos/hero-video.mp4" type="video/mp4" />
-            
+
             {/* Opción 2: Video externo de respaldo */}
-            <source 
-              src="https://assets.mixkit.co/videos/preview/mixkit-group-of-people-in-a-business-meeting-44537-large.mp4" 
-              type="video/mp4" 
+            <source
+              src="https://assets.mixkit.co/videos/preview/mixkit-group-of-people-in-a-business-meeting-44537-large.mp4"
+              type="video/mp4"
             />
-            
+
             {/* Opción 3: Otro video externo */}
-            <source 
-              src="https://cdn.pixabay.com/video/2023/02/28/160456-805004017_large.mp4" 
-              type="video/mp4" 
+            <source
+              src="https://cdn.pixabay.com/video/2023/02/28/160456-805004017_large.mp4"
+              type="video/mp4"
             />
-            
+
             Tu navegador no soporta el elemento video.
           </video>
         )}
-        
+
         {/* Overlay para mejor contraste */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/40" />
       </div>
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl text-gray-200 md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+          {/* <h1 className="text-4xl text-gray-200 md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
             ¿Deseas{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
               Crear
@@ -84,11 +84,18 @@ const Hero = () => {
               Posicionar
             </span>{" "}
             tu Negocio?
-          </h1>
-          
+          </h1> */}
+          <div className="flex justify-center w-full py-4">
+            <img
+              src="/images/logo 2.png"
+              alt="Crear o Posicionar tu Negocio"
+              className="w-full max-w-2xl h-auto object-contain drop-shadow-2xl"
+            />
+          </div>
+
           {/* Subtitle */}
-          <p className="text-xl text-gray-300 md:text-2xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-            Transformamos ideas en negocios exitosos con estrategia, diseño y pasión
+          <p className="text-xl text-gray-300 md:text-2xl text-primary-foreground/90 mx-auto leading-relaxed">
+            Somos el resultado de +18 años de experiencia de un equipo especialista en estrategia, desarrollo y posicionamiento de negocio.
           </p>
 
           {/* Action Buttons */}
@@ -97,7 +104,7 @@ const Hero = () => {
               Conoce Nuestros Servicios
               <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
             </button>
-            
+
             <button className="group relative bg-white/10 backdrop-blur-sm text-primary-foreground text-lg font-semibold px-8 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center gap-2">
               <span>▶</span>
               Ver Casos de Éxito
@@ -108,8 +115,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex flex-col items-center gap-2"> 
-            <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2 animate-bounce" />
+        <div className="flex flex-col items-center gap-2">
+          <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2 animate-bounce" />
         </div>
       </div>
     </section>

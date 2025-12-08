@@ -10,7 +10,7 @@ export default function Clients() {
     },
     {
       name: "Play Station",
-      logo: "/images/logos/playstation.svg", 
+      logo: "/images/logos/playstation.svg",
       sector: "Tecnología"
     },
     {
@@ -53,9 +53,8 @@ export default function Clients() {
     <section id="clientes" className="py-20 bg-gradient-to-b from-white to-gray-50/50">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Header con efecto */}
-        <div className={`text-center mb-16 transition-all duration-700 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
           <span className="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full mb-4">
             Portfolio de Clientes
           </span>
@@ -73,11 +72,10 @@ export default function Clients() {
         {/* Grid con efectos escalonados */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
           {clients.map((client, index) => (
-            <div 
+            <div
               key={index}
-              className={`p-4 w-full transition-all duration-500 ease-out ${
-                isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-              }`}
+              className={`p-4 w-full transition-all duration-500 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                }`}
               style={{
                 transitionDelay: isVisible ? `${index * 100}ms` : '0ms'
               }}
@@ -85,14 +83,14 @@ export default function Clients() {
               <div className="group relative bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-32 flex items-center justify-center overflow-hidden">
                 {/* Efecto de brillo al hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                
+
                 {/* Logo */}
-                <img 
-                  src={client.logo} 
+                <img
+                  src={client.logo}
                   alt={client.name}
                   className="max-h-16 max-w-32 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 relative z-10"
                 />
-                
+
                 {/* Tooltip en hover */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-white text-xs font-semibold text-center">{client.name}</p>
@@ -104,9 +102,8 @@ export default function Clients() {
         </div>
 
         {/* Stats con efecto fade-in */}
-        <div className={`mt-16 pt-8 border-t border-gray-200 transition-all duration-700 delay-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        {/* <div className={`mt-16 pt-8 border-t border-gray-200 transition-all duration-700 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
           <div className="flex flex-wrap justify-center gap-12 text-center">
             <div className="group">
               <div className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">50+</div>
@@ -125,16 +122,16 @@ export default function Clients() {
               <div className="text-gray-600 text-sm mt-1 group-hover:text-gray-800 transition-colors">Satisfacción</div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Footer con efecto sutil */}
-        <div className={`mt-12 text-center transition-all duration-700 delay-1200 ${
+        {/* <div className={`mt-12 text-center transition-all duration-700 delay-1200 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}>
           <p className="text-gray-500 text-lg">
             <span className="text-blue-600 font-semibold">+18 años</span> construyendo relaciones de confianza duraderas
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

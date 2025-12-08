@@ -5,13 +5,12 @@ export default function Presentation({ title, subtitle, items = [] }) {
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Header - Ahora dinámico */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          
+
           {/* Usamos 'dangerouslySetInnerHTML' para poder pasar HTML en el título como "<span>" */}
           <h2
-            className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+            className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6 font-['Dancing_Script']"
             dangerouslySetInnerHTML={{ __html: title }}
           />
-
           {/* Usamos 'dangerouslySetInnerHTML' para poder pasar HTML en el subtítulo como "<strong>" */}
           <p
             className="text-xl text-gray-600 leading-relaxed"
@@ -31,7 +30,7 @@ export default function Presentation({ title, subtitle, items = [] }) {
               {/* Contenedor del Icono */}
               <div className="inline-flex justify-center items-center 
                             rounded-full bg-blue-100 p-4 mb-5">
-                
+
                 {/* El Icono */}
                 <item.icon
                   className="h-8 w-8 text-blue-600"

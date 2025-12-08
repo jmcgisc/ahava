@@ -27,70 +27,70 @@ export default function Services() {
     // ... (El resto de tus servicios) ...
     {
       title: "Representación Comercial & Desarrollo de Negocio",
-      description: "Incrementa tus ventas y lleva tu marca a nuevos mercados con estrategias efectivas.",
+      description: "Incrementa las ventas de tu empresa y crece tu marca con estrategias efectivas",
       details:
         "Creamos y ejecutamos estrategias comerciales a la medida. Nuestro equipo impulsa el crecimiento de tu empresa y fortalece tus relaciones B2B.",
-      image: "/images/ventas.jpg",
+      image: "/images/estrategia.jpg",
       gradient: "from-purple-600 to-pink-500",
-      icon: FaChartLine, 
+      icon: FaChartLine,
     },
     {
       title: "Nómina & Benefits",
-      description: "Nos encargamos de la gestión integral de tu equipo, nómina y beneficios.",
+      description: "Nómina, subcontratación y cumplimiento REPSE",
       details:
         "Garantizamos precisión en cálculos, cumplimiento legal y gestión transparente. Con nuestro servicio, tu equipo siempre recibe a tiempo y sin errores.",
-      image: "/images/nomina.jpg",
+      image: "/images/asesores.jpg",
       gradient: "from-cyan-600 to-blue-500",
-      icon: FaCalculator, 
+      icon: FaCalculator,
     },
     {
-      title: "Diseño de Marca & Marketing Digital",
-      description: "Creamos experiencias visuales y estrategias digitales que posicionan tu marca.",
+      title: "Diseño de Marca & Branding",
+      description: "Creación, diseño y desarrollo de marca, diseño gráfico y packaging.",
       details:
         "Desde identidad visual y desarrollo web hasta campañas digitales y social media. Potencia tu presencia en línea con diseño y estrategia.",
       image: "/images/branding.jpg",
       gradient: "from-orange-500 to-red-500",
-      icon: FaPaintBrush, 
+      icon: FaPaintBrush,
     },
     {
       title: "Asesoría & Defensa Legal para Empresas",
-      description: "Protege a tu empresa con asesoría experta en derecho corporativo, fiscal y laboral.",
+      description: "Derecho corporativo, derecho laboral, derecho fiscal y derecho mercantil.",
       details:
         "Contamos con abogados especializados en derecho empresarial, laboral y fiscal. Prevenimos riesgos y resolvemos conflictos con eficacia.",
-      image: "/images/legal.jpg",
+      image: "/images/edificio.jpg",
       gradient: "from-slate-800 to-slate-600",
-      icon: FaGavel, 
+      icon: FaGavel,
     },
     {
-      title: "Estrategia de Negocio",
-      description: "Analizamos, planificamos y transformamos tu negocio para alcanzar el éxito sostenible.",
+      title: "Promotoría y Campañas BTL",
+      description: "Deja de perder recursos y tiempo e incrementa las ventas de tu empresa",
       details:
         "Diseñamos modelos de negocio, analizamos tu mercado y desarrollamos estrategias competitivas que impulsan el crecimiento sostenido.",
-      image: "/images/estrategia.jpg",
+      image: "/images/nomina.jpg",
       gradient: "from-emerald-500 to-teal-500",
-      icon: FaLightbulb, 
+      icon: FaLightbulb,
     },
   ];
 
   return (
     // --- CAMBIO 1: Nuevo fondo base (gradiente más colorido y sutil) ---
-    <section 
-      id="servicios" 
+    <section
+      id="servicios"
       className="relative py-28 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden"
     >
-      
+
       {/* --- CAMBIO 2: Fondos "Aurora" más grandes y sin pulso --- */}
-      <div 
+      <div
         className="absolute top-[-20%] right-[-20%] w-[800px] h-[800px] 
-                   bg-blue-200 rounded-full blur-3xl opacity-30" 
+                   bg-blue-200 rounded-full blur-3xl opacity-30"
       />
-      <div 
+      <div
         className="absolute bottom-[-30%] left-[-20%] w-[900px] h-[900px] 
-                   bg-purple-200 rounded-full blur-3xl opacity-30" 
+                   bg-purple-200 rounded-full blur-3xl opacity-30"
       />
-      <div 
+      <div
         className="absolute top-[30%] left-[25%] w-[700px] h-[700px] 
-                   bg-cyan-100 rounded-full blur-3xl opacity-20" 
+                   bg-cyan-100 rounded-full blur-3xl opacity-20"
       />
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -148,7 +148,7 @@ export default function Services() {
                 >
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-500">
                   {service.title}
                 </h3>
@@ -195,7 +195,7 @@ export default function Services() {
               >
                 ✖️
               </button>
-              
+
               {/* El contenido del modal */}
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">{selectedService.title}</h3>
