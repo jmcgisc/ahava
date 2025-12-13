@@ -1,47 +1,48 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Clients() {
   const [isVisible, setIsVisible] = useState(false);
+
   const clients = [
     {
-      name: "El Porton",
-      logo: "/images/logos/porton.png",
-      sector: "Food & Beverage"
+      name: "Alen",
+      logo: "/images/clientes/alen.png",
+      description: "Empresa mexicana líder en productos de limpieza y cuidado del hogar"
     },
     {
-      name: "Play Station",
-      logo: "/images/logos/playstation.svg",
-      sector: "Tecnología"
+      name: "Atento",
+      logo: "/images/clientes/atento.png",
+      description: "Empresa líder global en consultoría y externalización de procesos de negocio (BPO) y gestión de la relación con clientes (CRM)"
     },
     {
       name: "Gatorade",
-      logo: "/images/logos/Gatorade.png",
-      sector: "Deportes"
+      logo: "/images/clientes/gatorade.jpg",
+      description: "Bebida isotónica líder, científicamente formulada para deportistas,"
     },
     {
-      name: "Tropicana",
-      logo: "/images/logos/Tropicana.png",
-      sector: "Bebidas"
+      name: "Justo",
+      logo: "/images/clientes/justo.jpg",
+      description: "Empresa mexicana 100% en línea"
     },
     {
-      name: "Amazon",
-      logo: "/images/logos/logo-amazon.svg",
-      sector: "Tecnología"
+      name: "Kavak",
+      logo: "/images/clientes/kavak.jpeg",
+      description: "Empresa mexicana de comercio electrónico de autos usados que revoluciona el mercado con un modelo digital"
+    },
+    {
+      name: "SHP",
+      logo: "/images/clientes/shp.jpg",
+      description: "Fabricante y lider mundial de empaques para cosméticos"
+    },
+    {
+      name: "Soriana",
+      logo: "/images/clientes/soriana.png",
+      description: "Importante empresa mexicana de retail"
     },
     {
       name: "Vips",
-      logo: "/images/logos/vips.svg",
-      sector: "Alimentos"
-    },
-    {
-      name: "Charro Negro",
-      logo: "/images/logos/charro-negro.png",
-      sector: "Bebidas"
-    },
-    {
-      name: "TDS Logistics",
-      logo: "/images/logos/tds-logistics.png",
-      sector: "Logística"
+      logo: "/images/clientes/vips.png",
+      description: "Icónica cadena mexicana de restaurantes tipo cafetería"
     }
   ];
 
@@ -50,88 +51,79 @@ export default function Clients() {
   }, []);
 
   return (
-    <section id="clientes" className="py-20 bg-gradient-to-b from-white to-gray-50/50">
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
-        {/* Header con efecto */}
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+    <section
+      id="clientes"
+      aria-labelledby="clientes-titulo"
+      className="py-20 md:py-32 bg-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header minimalista */}
+        <div className={`text-center mb-16 lg:mb-24 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-          <span className="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full mb-4">
-            Portfolio de Clientes
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Clientes que{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-              Confían en Nosotros
-            </span>
+          <h2
+            id="clientes-titulo"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 tracking-tight"
+          >
+            <span className="block">Clientes que</span>
+            <span className="text-blue-600">confían en nosotros</span>
           </h2>
+
+          <div className="inline-block w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-8"></div>
+
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Más de 50 empresas líderes han elegido nuestros servicios para impulsar su crecimiento
+            Colaboramos con organizaciones líderes para transformar su gestión
+            de talento y potenciar su cultura organizacional.
           </p>
         </div>
 
-        {/* Grid con efectos escalonados */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+        {/* Grid minimalista */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {clients.map((client, index) => (
             <div
-              key={index}
-              className={`p-4 w-full transition-all duration-500 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+              key={client.name}
+              className={`transition-all duration-500 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 100}ms` : '0ms'
-              }}
+              style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="group relative bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-32 flex items-center justify-center overflow-hidden">
-                {/* Efecto de brillo al hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              {/* Tarjeta minimalista */}
+              <div className="group relative h-[280px] bg-white rounded-2xl border border-gray-100 transition-all duration-300 hover:border-blue-200 hover:shadow-xl flex flex-col items-center justify-center p-8">
 
                 {/* Logo */}
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="max-h-16 max-w-32 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 relative z-10"
-                />
+                <div className="relative flex items-center justify-center h-20 mb-8">
+                  <img
+                    src={client.logo}
+                    alt={`Logo de ${client.name}`}
+                    loading="lazy"
+                    className="h-16 object-contain grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                  />
+                </div>
 
-                {/* Tooltip en hover */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white text-xs font-semibold text-center">{client.name}</p>
-                  <p className="text-white/70 text-xs text-center">{client.sector}</p>
+                {/* Contenido */}
+                <div className="text-center space-y-4">
+                  <p className="text-xl font-bold text-gray-900">
+                    {client.name}
+                  </p>
+                  <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
+                    {client.description}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Stats con efecto fade-in */}
-        {/* <div className={`mt-16 pt-8 border-t border-gray-200 transition-all duration-700 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        {/* Estadística minimalista */}
+        <div className={`mt-20 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"
           }`}>
-          <div className="flex flex-wrap justify-center gap-12 text-center">
-            <div className="group">
-              <div className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">50+</div>
-              <div className="text-gray-600 text-sm mt-1 group-hover:text-gray-800 transition-colors">Clientes</div>
-            </div>
-            <div className="group">
-              <div className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">18+</div>
-              <div className="text-gray-600 text-sm mt-1 group-hover:text-gray-800 transition-colors">Años</div>
-            </div>
-            <div className="group">
-              <div className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">12+</div>
-              <div className="text-gray-600 text-sm mt-1 group-hover:text-gray-800 transition-colors">Industrias</div>
-            </div>
-            <div className="group">
-              <div className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">98%</div>
-              <div className="text-gray-600 text-sm mt-1 group-hover:text-gray-800 transition-colors">Satisfacción</div>
-            </div>
+          <div className="text-center">
+            <p className="text-4xl font-bold text-gray-900 mb-2">+50</p>
+            <p className="text-gray-600">
+              empresas han transformado su gestión de talento con nosotros
+            </p>
           </div>
-        </div> */}
+        </div>
 
-        {/* Footer con efecto sutil */}
-        {/* <div className={`mt-12 text-center transition-all duration-700 delay-1200 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}>
-          <p className="text-gray-500 text-lg">
-            <span className="text-blue-600 font-semibold">+18 años</span> construyendo relaciones de confianza duraderas
-          </p>
-        </div> */}
       </div>
     </section>
   );
