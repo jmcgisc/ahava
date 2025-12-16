@@ -6,7 +6,7 @@ import About from "./components/About";
 import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import FloatingWhatsApp from './components/FloatingWhatsApp'; // Ajusta la ruta si es necesario
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Cta from "./components/Cta";
 
 import {
@@ -15,7 +15,6 @@ import {
   CheckBadgeIcon,
 } from "@heroicons/react/24/outline";
 
-// Datos centralizados para mejor mantenimiento
 const appConfig = {
   presentation: {
     title: "Amamos lo que hacemos",
@@ -27,8 +26,8 @@ const appConfig = {
         icon: ChartBarIcon,
       },
       {
-        title: "Gestión Integral",
-        text: "Diseñamos y gestionamos proyectos en una gran diversidad de categorías.",
+        title: "Casos de Éxito",
+        text: "Cada servicio esta diseñado para generar impacto real, elevar tu marca y fortalecer tus resultados.",
         icon: BriefcaseIcon,
       },
       {
